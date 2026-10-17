@@ -1,1 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #111827;
+    margin: 0px;
+}
 
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+a {
+    color: #4338ca;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Header and footer (Flexbox) */
+.site-header,
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+}
+
+.site-header ul,
+.site-footer ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.logo,
+.site-footer p {
+    margin: 0px;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.site-header a {
+    color: #111827;
+}
+
+.site-footer {
+    background-color: #111827;
+    color: white;
+}
+
+.site-footer a {
+    color: white;
+}
+
+/* Page container */
+.container {
+    margin: 0px auto;
+    max-width: 1280px;
+    padding: 1.5rem 1.25rem;
+}
+
+/* Grids (single column on mobile) */
+.hero-grid,
+.cards-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.hero-main {
+    background-color: #eef2ff;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.hero-sidebar,
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #4338ca;
+    margin-bottom: 0px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #4338ca;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+}
+
+/* Cards (Flexbox column) */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    height: 200px;
+    background-color: #e5e7eb;
+}
+
+.card .button {
+    background-color: #f97316;
+    color: #111827;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .site-header,
+    .site-footer {
+        padding: 1rem 5rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .cards-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
